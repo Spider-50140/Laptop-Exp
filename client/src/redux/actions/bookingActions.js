@@ -7,7 +7,7 @@ export const bookCar = (reqObj) => async (dispatch) => {
     await axios.post('/api/booking/bookcar', reqObj)
 
     dispatch({ type: 'loading', payload: false })
-    message.success('Your car booked successfully')
+    message.success('Your Device booked successfully')
     // after successful booking we will navigate user to booking page
     setTimeout(() => {
       window.location.href = '/userbooking'

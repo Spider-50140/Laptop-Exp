@@ -51,7 +51,7 @@ function Defaultlayout(props) {
       <div className='footer text-center'>
         <hr />
         <p style={{ background: '#71DFE7', padding: '10px' }}>
-          Designed and Developed by Satya
+          Developed with 💖 and ☕ by Satya
         </p>
       </div>
     </div>
