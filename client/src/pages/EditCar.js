@@ -44,12 +44,12 @@ function EditCar({ match }) {
               layout='vertical'
               onFinish={onFinish}
             >
-              <h3>Edit Car</h3>
+              <h3>Edit Device</h3>
 
               <hr />
               <Form.Item
                 name='name'
-                label='Car name'
+                label='Laptop name'
                 rules={[{ required: true }]}
               >
                 <Input />
@@ -63,21 +63,21 @@ function EditCar({ match }) {
               </Form.Item>
               <Form.Item
                 name='rentPerHour'
-                label='Rent per hour'
+                label='Rent'
                 rules={[{ required: true }]}
               >
                 <Input />
               </Form.Item>
               <Form.Item
                 name='capacity'
-                label='Capacity'
+                label='Battery Backup'
                 rules={[{ required: true }]}
               >
                 <Input />
               </Form.Item>
               <Form.Item
                 name='fuelType'
-                label='Fuel Type'
+                label='Specs'
                 rules={[{ required: true }]}
               >
                 <Input />
