@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Menu, Dropdown, Button, Space, Row, Col } from 'antd'
 import { Link } from 'react-router-dom'
 
 // we will be using this default layout for  all our pages to render the content , here we have one div with classname as content, here only we will be rendering all our pages, we will be passing content of all our pages to default layout with the help of props and then render in div content as props.children
 function Defaultlayout(props) {
+  const value = false
   // we need to show name of user has just performed login so below statements are necessary
   const user = JSON.parse(localStorage.getItem('user'))
+  const [show, setShow] = useState(false)
+  let adminname = 'Satya'
+  let adminpass = '934'
+  const name = user.username
+  const pass = user.password
+  console.log(name)
+  console.log(pass)
+
+  useEffect(() => {
+    if (name === adminname && pass === adminpass) {
+      setShow(true)
+    }
+  }, [])
+
+  console.log(show)
 
   // menu code we have copied from antd
   const menu = (
@@ -16,9 +32,10 @@ function Defaultlayout(props) {
       <Menu.Item>
         <a href='/userbooking'>Booking</a>
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item disabled={!show}>
         <a href='/admin'>Admin</a>
       </Menu.Item>
+
       <Menu.Item
         // after clicking on logout we will remove details of that user from localstorage and move him to login page
         onClick={() => {
@@ -40,6 +57,7 @@ function Defaultlayout(props) {
                 <Link to='/'>Laptop_Rent</Link>
               </h1>
               {/* below dropdown code we have taken from antd wesbiite */}
+
               <Dropdown overlay={menu} placement='bottomCenter'>
                 <Button>{user.username}</Button>
               </Dropdown>

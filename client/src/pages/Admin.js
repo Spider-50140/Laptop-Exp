@@ -17,6 +17,23 @@ function AdminHome() {
   const [totalCars, setTotalcars] = useState([])
   const dispatch = useDispatch()
 
+  const user = JSON.parse(localStorage.getItem('user'))
+  const [show, setShow] = useState(false)
+  let adminname = 'Satya'
+  let adminpass = '934'
+  const name = user.username
+  const pass = user.password
+  console.log(name)
+  console.log(pass)
+
+  useEffect(() => {
+    if (name === adminname && pass === adminpass) {
+      setShow(true)
+    }
+  }, [])
+
+  console.log(show)
+
   useEffect(() => {
     dispatch(getcardata())
   }, [])
@@ -63,6 +80,7 @@ function AdminHome() {
                     </Link>
                     {/* we will show a pop-up when user want to delete a car thats why we used popconfirm from antd */}
                     <Popconfirm
+                      disabled={!show}
                       title='Are you sure to delete this Laptop?'
                       onConfirm={() => {
                         dispatch(deleteCar({ carid: car._id }))

@@ -1,12 +1,30 @@
 import { Col, Row, Form, Input } from 'antd'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Defaultlayout from '../components/Defaultlayout'
 import Spinner from '../components/Spinner'
 import { addCar } from '../redux/actions/caraction'
+
 function AddCar() {
   const dispatch = useDispatch()
   const { loading } = useSelector((state) => state.ar)
+
+  const user = JSON.parse(localStorage.getItem('user'))
+  const [show, setShow] = useState(false)
+  let adminname = 'Satya'
+  let adminpass = '934'
+  const name = user.username
+  const pass = user.password
+  console.log(name)
+  console.log(pass)
+
+  useEffect(() => {
+    if (name === adminname && pass === adminpass) {
+      setShow(true)
+    }
+  }, [])
+
+  console.log(show)
 
   function onFinish(values) {
     values.bookedTimeSlots = []
@@ -37,30 +55,24 @@ function AddCar() {
             >
               <Input />
             </Form.Item>
-            <Form.Item
-              name='rentPerHour'
-              label='Rent'
-              rules={[{ required: true }]}
-            >
+            <Form.Item name='Rent' label='Rent' rules={[{ required: true }]}>
               <Input />
             </Form.Item>
             <Form.Item
-              name='capacity'
+              name='Battery Backup'
               label='Battery Backup'
               rules={[{ required: true }]}
             >
               <Input />
             </Form.Item>
-            <Form.Item
-              name='fuelType'
-              label='Specs'
-              rules={[{ required: true }]}
-            >
+            <Form.Item name='Specs' label='Specs' rules={[{ required: true }]}>
               <Input />
             </Form.Item>
 
             <div className='text-right'>
-              <button className='btn1'>ADD Device</button>
+              <button disabled={!show} className='btn1'>
+                ADD Device
+              </button>
             </div>
           </Form>
         </Col>

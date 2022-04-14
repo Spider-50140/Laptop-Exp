@@ -12,6 +12,23 @@ function EditCar({ match }) {
   const [car, setcar] = useState()
   const [totalcars, settotalcars] = useState([])
 
+  const user = JSON.parse(localStorage.getItem('user'))
+  const [show, setShow] = useState(false)
+  let adminname = 'Satya'
+  let adminpass = '934'
+  const name = user.username
+  const pass = user.password
+  console.log(name)
+  console.log(pass)
+
+  useEffect(() => {
+    if (name === adminname && pass === adminpass) {
+      setShow(true)
+    }
+  }, [])
+
+  console.log(show)
+
   useEffect(() => {
     if (cars.length == 0) {
       dispatch(getcardata())
@@ -84,7 +101,9 @@ function EditCar({ match }) {
               </Form.Item>
 
               <div className='text-right'>
-                <button className='btn1'>Save Details</button>
+                <button disabled={!show} className='btn1'>
+                  Save Details
+                </button>
               </div>
             </Form>
           )}
