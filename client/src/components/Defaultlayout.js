@@ -37,7 +37,7 @@ function Defaultlayout(props) {
           <Col lg={20} sm={24} xs={24}>
             <div className='d-flex justify-content-between '>
               <h1>
-                <Link to='/'>Quick-Car</Link>
+                <Link to='/'>Laptop_Rent</Link>
               </h1>
               {/* below dropdown code we have taken from antd wesbiite */}
               <Dropdown overlay={menu} placement='bottomCenter'>

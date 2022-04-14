@@ -65,7 +65,7 @@ function Home() {
           <div className='car-content  d-flex align-items-center justify-content-between '>
             <div>
               <p>{i.name} </p>
-              <p>Rent - Rs {i.rentPerHour}/hr </p>
+              <p>Rent - Rs {i.rentPerHour}/week </p>
             </div>
             <div>
               {/* <button className='btn1 mr2'>Book Now</button> */}

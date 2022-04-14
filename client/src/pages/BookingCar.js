@@ -45,9 +45,11 @@ function BookingCar(match) {
 
   // this useffect is basically to calculate total amount if driver or totalhour is changed
   useEffect(() => {
-    setTotalAmount(totalHours * car.rentPerHour)
+    let x = Math.round(totalHours / 24)
+    let fees = x * car.rentPerHour
+    setTotalAmount(fees)
     if (driver) {
-      setTotalAmount(totalAmount + 30 * totalHours)
+      setTotalAmount(fees + 50 * x)
     }
   }, [driver, totalHours])
 
@@ -102,13 +104,13 @@ function BookingCar(match) {
         </Col>
         <Col lg={10} sm={24} xs={24} className='text-right'>
           <Divider type='horizontal' dashed>
-            Car Info
+            Laptop Info
           </Divider>
           <div style={{ textAlign: 'right' }}>
             <p>{car.name}</p>
-            <p>{car.rentPerHour} Rent Per hour /-</p>
-            <p>Fuel Type : {car.fuelType}</p>
-            <p>Max Persons : {car.capacity}</p>
+            <p>Rs : {car.rentPerHour} Per Day /-</p>
+            <p>Specs : {car.fuelType}</p>
+            <p>Battery Backup : {car.capacity} Hours </p>
           </div>
 
           <Divider type='horizontal' dashed>
@@ -136,7 +138,7 @@ function BookingCar(match) {
             <div>
               <p>Booking Hours :- {totalHours} Hours</p>
 
-              <p>Rent per hour is :- {car.rentPerHour} </p>
+              <p>Rent per Day is :- {car.rentPerHour} </p>
               {/* now we will creat checkbox using antd */}
               <Checkbox
                 onChange={(e) => {
@@ -147,7 +149,7 @@ function BookingCar(match) {
                   }
                 }}
               >
-                Driver Required
+                Additional Mouse Required
               </Checkbox>
               <h3>Total amount ={totalAmount} </h3>
 

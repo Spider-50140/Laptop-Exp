@@ -21,7 +21,7 @@ function AddCar() {
       <Row justify='center mt-5'>
         <Col lg={12} sm={24} xs={24} className='p-2'>
           <Form className='bs1 p-2' layout='vertical' onFinish={onFinish}>
-            <h3>Add New Car</h3>
+            <h3>Add New Laptop</h3>
             <hr />
             <Form.Item
               name='name'
