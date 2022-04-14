@@ -32,11 +32,14 @@ function Register() {
           <img
             className='w-100'
             // for bringing image from left
-            data-aos='slide-left'
-            data-aos-duration='1500'
-            src='https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80'
+            // data-aos='slide-left'
+            // data-aos-duration='1500'
+            // src='https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80'
+            // src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Happy_Cartoon_Man_At_Work_Using_A_Computer.svg/2560px-Happy_Cartoon_Man_At_Work_Using_A_Computer.svg.png'
+            // src='https://i.ibb.co/W5nq9kz/Front-Page.png'
+            src='https://i.ibb.co/6ZcrGc4/2560px-Happy-Cartoon-Man-At-Work-Using-A-Computer-svg-3.png'
           />
-          <h1 className='login-logo'>Book-Ur-Car</h1>
+          {/* <h1 className='login-logo'>Book-Ur-Car</h1> */}
         </Col>
         <Col lg={8} className='text-left p-5'>
           {/* after user enters all values in form and click on Register form will call a function named onfinish and in above we have written logic for that */}
