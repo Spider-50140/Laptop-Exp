@@ -32,7 +32,7 @@ function AdminHome() {
           <div className='d-flex justify-content-between align-items-center'>
             <h3 className='mt-1 mr-2'>Admin Panel</h3>
             <button className='btn1'>
-              <a href='/addcar'>ADD CAR</a>
+              <a href='/addcar'>ADD Laptop</a>
             </button>
           </div>
         </Col>
@@ -50,7 +50,7 @@ function AdminHome() {
                 <div className='car-content d-flex align-items-center justify-content-between'>
                   <div className='text-left pl-2'>
                     <p>{car.name}</p>
-                    <p> Rent Per Hour {car.rentPerHour} /-</p>
+                    <p> Rent Per Day {car.rentPerHour} /-</p>
                   </div>
 
                   {/*  we will be using icons for edit and delete , we are using antd icons */}
