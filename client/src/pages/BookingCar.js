@@ -49,7 +49,7 @@ function BookingCar(match) {
     let fees = x * car.rentPerHour
     setTotalAmount(fees)
     if (driver) {
-      setTotalAmount(fees + 50 * x)
+      setTotalAmount(fees + 30 * x)
     }
   }, [driver, totalHours])
 

@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const bookingSchema = new mongoose.Schema(
   {
-    car: { type: mongoose.Schema.Types.ObjectID, ref: 'cars' },
+    car: { type: mongoose.Schema.Types.ObjectID, ref: 'laptops' },
     user: { type: mongoose.Schema.Types.ObjectID, ref: 'users' },
     bookedTimeSlots: {
       from: { type: String },

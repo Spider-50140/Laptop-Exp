@@ -40,7 +40,10 @@ function UserBookings() {
                     Total hours : <b>{booking.totalHours}</b>
                   </p>
                   <p>
-                    Rent per hour : <b>{booking.car.rentPerHour}</b>
+                    No of Days : <b>{Math.round(booking.totalHours) / 24}</b>
+                  </p>
+                  <p>
+                    Rent per Day : <b>{booking.car.rentPerHour}</b>
                   </p>
                   <p>
                     Total amount : <b>{booking.totalAmount}</b>
