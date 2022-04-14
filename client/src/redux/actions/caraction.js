@@ -32,7 +32,7 @@ export const addCar = (reqObj) => async (dispatch) => {
     await axios.post('/api/cars/addcar', reqObj)
 
     dispatch({ type: 'loading', payload: false })
-    message.success('New car added successfully')
+    message.success('New Laptop added successfully')
     setTimeout(() => {
       window.location.href = '/admin'
     }, 500)
@@ -49,7 +49,7 @@ export const editCar = (reqObj) => async (dispatch) => {
     await axios.post('/api/cars/editcar', reqObj)
 
     dispatch({ type: 'loading', payload: false })
-    message.success('Car details updated successfully')
+    message.success('Laptop details updated successfully')
     setTimeout(() => {
       window.location.href = '/admin'
     }, 500)
@@ -66,7 +66,7 @@ export const deleteCar = (reqObj) => async (dispatch) => {
     await axios.post('/api/cars/deletecar', reqObj)
 
     dispatch({ type: 'loading', payload: false })
-    message.success('Car deleted successfully')
+    message.success('Laptop deleted successfully')
     // after success we will just reload page
     setTimeout(() => {
       window.location.reload()

@@ -63,7 +63,7 @@ function AdminHome() {
                     </Link>
                     {/* we will show a pop-up when user want to delete a car thats why we used popconfirm from antd */}
                     <Popconfirm
-                      title='Are you sure to delete this car?'
+                      title='Are you sure to delete this Laptop?'
                       onConfirm={() => {
                         dispatch(deleteCar({ carid: car._id }))
                       }}

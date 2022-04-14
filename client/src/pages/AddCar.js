@@ -60,7 +60,7 @@ function AddCar() {
             </Form.Item>
 
             <div className='text-right'>
-              <button className='btn1'>ADD CAR</button>
+              <button className='btn1'>ADD Device</button>
             </div>
           </Form>
         </Col>
