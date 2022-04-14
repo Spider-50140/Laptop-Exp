@@ -20,7 +20,7 @@ export const userlogin = (data) => (dispatch) => {
     })
     .catch((err) => {
       console.log(err)
-      message.error('Something went Wrong !!')
+      message.error('Oops Wrong Credentials !!')
       dispatch({ type: 'loading', payload: false })
     })
 }
