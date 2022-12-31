@@ -15,6 +15,8 @@ app.use('/api/cars/', carmodel)
 app.use('/api/users/', userpath)
 app.use('/api/booking/', booking)
 
+app.use(cors({https://book-laptop.onrender.com}))
+
 // app.get('/check', (req, res) => {
 //   var sp = ['bittu', 'Satya', 'Prakash']
 //   res.send(sp)
