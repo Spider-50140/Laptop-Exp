@@ -15,22 +15,22 @@ app.use('/api/cars/', carmodel)
 app.use('/api/users/', userpath)
 app.use('/api/booking/', booking)
 
-app.use(cors({https://book-laptop.onrender.com}))
+app.use(cors({https://booklaptop.onrender.com}))
 
 // app.get('/check', (req, res) => {
 //   var sp = ['bittu', 'Satya', 'Prakash']
 //   res.send(sp)
 // })
 
-if (process.env.NODE_ENV === 'production') {
-  // after deploying to server we are going to get a build folder inside client and there only we will have all of our client related code
-  app.use('/', express.static('client/build'))
+// if (process.env.NODE_ENV === 'production') {
+//   // after deploying to server we are going to get a build folder inside client and there only we will have all of our client related code
+//   app.use('/', express.static('client/build'))
 
-  // Its for the entry point, for all the client request we have to got to client/build/index.html
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client/build/index.html'))
-  })
-}
+//   // Its for the entry point, for all the client request we have to got to client/build/index.html
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client/build/index.html'))
+//   })
+// }
 
 app.get('/', (req, res) => res.send('MERN Car-Rental !!'))
 
