@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
+const db = process.env.MY_MONGO_URI;
 function connectDB() {
   mongoose.connect(
-    'mongodb+srv://Spider_8:mernlaptop@cluster0.i7duu.mongodb.net/Laptop_Rent',
+    db,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
